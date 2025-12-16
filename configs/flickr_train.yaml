@@ -1,0 +1,56 @@
+# Configuration for FLICKR-AES Dataset Training
+
+dataset:
+  name: FLICKR
+  data_dir: ./datasets/FLICKR
+  processed_dir: ./datasets/FLICKR/processed_dataset
+  image_dir: ./datasets/FLICKR/40K
+  train_json: ./datasets/FLICKR/processed_dataset/train.json
+  val_json: ./datasets/FLICKR/processed_dataset/val.json
+  test_json: ./datasets/FLICKR/processed_dataset/test.json
+  user_preferences: ./datasets/FLICKR/FLICKR_styles.json
+  
+model:
+  stable_diffusion: runwayml/stable-diffusion-v1-5
+  # Or use local path:
+  # stable_diffusion: ./checkpoints/stable-diffusion-v1-5
+  llama: meta-llama/Llama-2-7b-chat-hf
+  # Or use local path:
+  # llama: ./checkpoints/Llama-2-7b-chat-hf
+  clip: ./checkpoints/clip-vit-base-patch32
+  
+training:
+  output_dir: ./outputs/flickr
+  num_train_epochs: 3
+  train_batch_size: 6
+  val_batch_size: 1
+  gradient_accumulation_steps: 4
+  learning_rate: 5.0e-6
+  lr_scheduler: linear
+  lr_warmup_steps: 0
+  lr_num_cycles: 1
+  weight_decay: 0.01
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1.0e-6
+  max_grad_norm: 1.0
+  mixed_precision: bf16
+  seed: 42
+  dataloader_num_workers: 4
+  logging_steps: 10
+  save_steps: 1000
+  validation_steps: 100
+  resume_from: ""
+  
+pmg:
+  num_image_prompt: 2
+  num_prefix_prompt: 2
+  max_sequence_length: 600
+  image_size: 512
+  
+inference:
+  num_inference_steps: 50
+  guidance_scale: 6.0
+  negative_prompt: "blurry, low quality, distorted, deformed, ugly, bad anatomy, watermark"
+  num_images_per_sample: 1
+

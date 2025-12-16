@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Logs and outputs
+*.log
+*.out
+logs/
+outputs/
+wandb/
+runs/
+
+# Checkpoints and models (keep README)
+checkpoints/*
+!checkpoints/README.md
+!checkpoints/.gitkeep
+
+# Datasets (keep README)
+datasets/*
+!datasets/README.md
+!datasets/.gitkeep
+
+# Training outputs
+train_result*/
+eval_outputs/
+*.ckpt
+*.pth
+*.pt
+*.bin
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Git
+.git/
+
+# Accelerate
+accelerate_config.yaml
+
+# Tensorboard
+events.out.tfevents.*
+
