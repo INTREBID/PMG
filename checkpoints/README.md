@@ -51,9 +51,9 @@ Models will be automatically downloaded from HuggingFace Hub on first use if not
 
 We provide pre-trained PMG checkpoints for all three datasets:
 
-- **FLICKR**: [Download Link TBA]
-- **POG**: [Download Link TBA]
-- **SER**: [Download Link TBA]
+- **FLICKR**: https://drive.google.com/file/d/1pT1xmAXtOg4i-HFh74_fHmNAWuYya98X/view?usp=sharing
+- **POG**: https://drive.google.com/file/d/13b6QanN_mS-spk0fvkbIDvF62OAeSj5d/view?usp=sharing
+- **SER**: https://drive.google.com/file/d/1G-dE882vcH86MFdOnq3kdmFQRg2EIWYT/view?usp=sharing
 
 Place the downloaded checkpoints in their respective directories:
 
